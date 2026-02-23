@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vulnerable Blog App</title>
+
+    <!-- VULNERABILITY: Inline script with credentials -->
+    <script>
+        window.API_CONFIG = {
+            key: 'sk_live_51HxyzABCDEF123456789',
+            secret: 'whsec_abc123def456',
+            endpoint: 'http://localhost:5000'
+        };
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
